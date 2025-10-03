@@ -1,0 +1,16 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dcclient"
+version = "0.1.0"
+description = "API client for Data Catalog"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Dimitris Petrou", email = "dpetrou@athenarc.gr"}, { name = "Vasiliki Pitsilou", email = "vpitsilou@athenarc.gr" }]
+license = { file = "LICENSE" }
+dependencies = ["httpx>=0.27,<0.29"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dcclient"]
